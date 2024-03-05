@@ -12,6 +12,7 @@ def create_rentals_over_time(df):
     monthly_df = df.resample('ME', on='dteday').sum()
     return monthly_df
 
+
 # Function to aggregate bike rentals based on seasonal data framework
 def aggregate_by_season(df):
     season_agg = df.groupby("season_x").agg({
